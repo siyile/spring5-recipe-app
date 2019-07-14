@@ -8,6 +8,7 @@ import top.siyile.spring5recipeapp.commands.RecipeCommand;
 import top.siyile.spring5recipeapp.converters.RecipeCommandToRecipe;
 import top.siyile.spring5recipeapp.converters.RecipeToRecipeCommand;
 import top.siyile.spring5recipeapp.domain.Recipe;
+import top.siyile.spring5recipeapp.exceptions.NotFoundException;
 import top.siyile.spring5recipeapp.repositories.RecipeRepository;
 
 import java.util.HashSet;
@@ -53,6 +54,18 @@ public class RecipeServiceImplTest {
         assertNotNull("Null recipe returned", recipeReturned);
         verify(recipeRepository, times(1)).findById(anyLong());
         verify(recipeRepository, never()).findAll();
+    }
+
+    @Test(expected = NotFoundException.class)
+    public void getRecipeByIdTestNotFound() throws Exception {
+
+        Optional<Recipe> recipeOptional = Optional.empty();
+
+        when(recipeRepository.findById(anyLong())).thenReturn(recipeOptional);
+
+        Recipe recipeReturned = recipeService.findById(1L);
+
+        //should go boom
     }
 
     @Test

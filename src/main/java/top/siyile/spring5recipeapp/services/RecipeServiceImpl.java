@@ -7,6 +7,7 @@ import top.siyile.spring5recipeapp.commands.RecipeCommand;
 import top.siyile.spring5recipeapp.converters.RecipeCommandToRecipe;
 import top.siyile.spring5recipeapp.converters.RecipeToRecipeCommand;
 import top.siyile.spring5recipeapp.domain.Recipe;
+import top.siyile.spring5recipeapp.exceptions.NotFoundException;
 import top.siyile.spring5recipeapp.repositories.RecipeRepository;
 
 import java.util.HashSet;
@@ -41,7 +42,7 @@ public class RecipeServiceImpl implements RecipeService {
         Optional<Recipe> recipeOptional = recipeRepository.findById(l);
 
         if (recipeOptional.isEmpty()) {
-            throw new RuntimeException("Recipe Not Found!");
+            throw new NotFoundException("Recipe Not Found. For ID value: " + l.toString());
         }
 
         return recipeOptional.get();
