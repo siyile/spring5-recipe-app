@@ -1,6 +1,6 @@
 # spring5-recipe-app
 
-[![codecov](https://codecov.io/gh/siyile/spring5-recipe-app/branch/master/graph/badge.svg)](https://codecov.io/gh/siyile/spring5-recipe-app)
+[![codecov](https://codecov.io/gh/siyile/spring5-recipe-app/branch/mongo/graph/badge.svg)](https://codecov.io/gh/siyile/spring5-recipe-app)
 
 [![CircleCI](https://circleci.com/gh/siyile/spring5-recipe-app/tree/mongo.svg?style=svg)](https://circleci.com/gh/siyile/spring5-recipe-app/tree/mongo)
 
