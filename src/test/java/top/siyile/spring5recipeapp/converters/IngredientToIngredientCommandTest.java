@@ -1,10 +1,8 @@
-package converters;
+package top.siyile.spring5recipeapp.converters;
 
 import org.junit.Before;
 import org.junit.Test;
 import top.siyile.spring5recipeapp.commands.IngredientCommand;
-import top.siyile.spring5recipeapp.converters.IngredientToIngredientCommand;
-import top.siyile.spring5recipeapp.converters.UnitOfMeasureToUnitOfMeasureCommand;
 import top.siyile.spring5recipeapp.domain.Ingredient;
 import top.siyile.spring5recipeapp.domain.Recipe;
 import top.siyile.spring5recipeapp.domain.UnitOfMeasure;
@@ -13,13 +11,16 @@ import java.math.BigDecimal;
 
 import static org.junit.Assert.*;
 
+/**
+ * Created by jt on 6/21/17.
+ */
 public class IngredientToIngredientCommandTest {
 
     public static final Recipe RECIPE = new Recipe();
     public static final BigDecimal AMOUNT = new BigDecimal("1");
     public static final String DESCRIPTION = "Cheeseburger";
-    public static final Long UOM_ID = 2L;
-    public static final Long ID_VALUE = 1L;
+    public static final String UOM_ID = "2";
+    public static final String ID_VALUE = "1";
 
 
     IngredientToIngredientCommand converter;
@@ -53,7 +54,6 @@ public class IngredientToIngredientCommandTest {
         //then
         assertNull(ingredientCommand.getUom());
         assertEquals(ID_VALUE, ingredientCommand.getId());
-        // assertEquals(RECIPE, ingredientCommand.get);
         assertEquals(AMOUNT, ingredientCommand.getAmount());
         assertEquals(DESCRIPTION, ingredientCommand.getDescription());
     }
@@ -77,6 +77,7 @@ public class IngredientToIngredientCommandTest {
         assertEquals(ID_VALUE, ingredientCommand.getId());
         assertNotNull(ingredientCommand.getUom());
         assertEquals(UOM_ID, ingredientCommand.getUom().getId());
+        // assertEquals(RECIPE, ingredientCommand.get);
         assertEquals(AMOUNT, ingredientCommand.getAmount());
         assertEquals(DESCRIPTION, ingredientCommand.getDescription());
     }

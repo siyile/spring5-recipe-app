@@ -1,17 +1,19 @@
-package converters;
+package top.siyile.spring5recipeapp.converters;
 
 import org.junit.Before;
 import org.junit.Test;
 import top.siyile.spring5recipeapp.commands.UnitOfMeasureCommand;
-import top.siyile.spring5recipeapp.converters.UnitOfMeasureToUnitOfMeasureCommand;
 import top.siyile.spring5recipeapp.domain.UnitOfMeasure;
 
 import static org.junit.Assert.*;
 
+/**
+ * Created by jt on 6/21/17.
+ */
 public class UnitOfMeasureToUnitOfMeasureCommandTest {
 
     public static final String DESCRIPTION = "description";
-    public static final Long LONG_VALUE = 1L;
+    public static final String LONG_VALUE = "1";
 
     UnitOfMeasureToUnitOfMeasureCommand converter;
 

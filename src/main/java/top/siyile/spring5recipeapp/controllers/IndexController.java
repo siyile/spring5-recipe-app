@@ -6,6 +6,9 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import top.siyile.spring5recipeapp.services.RecipeService;
 
+/**
+ * Created by jt on 6/1/17.
+ */
 @Slf4j
 @Controller
 public class IndexController {

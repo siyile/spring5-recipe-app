@@ -1,16 +1,15 @@
-package converters;
+package top.siyile.spring5recipeapp.converters;
 
 import org.junit.Before;
 import org.junit.Test;
 import top.siyile.spring5recipeapp.commands.NotesCommand;
-import top.siyile.spring5recipeapp.converters.NotesToNotesCommand;
 import top.siyile.spring5recipeapp.domain.Notes;
 
 import static org.junit.Assert.*;
 
 public class NotesToNotesCommandTest {
 
-    public static final Long ID_VALUE = 1L;
+    public static final String ID_VALUE = "1";
     public static final String RECIPE_NOTES = "Notes";
     NotesToNotesCommand converter;
 

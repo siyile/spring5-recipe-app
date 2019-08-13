@@ -1,16 +1,15 @@
-package converters;
+package top.siyile.spring5recipeapp.converters;
 
 import org.junit.Before;
 import org.junit.Test;
 import top.siyile.spring5recipeapp.commands.CategoryCommand;
-import top.siyile.spring5recipeapp.converters.CategoryCommandToCategory;
 import top.siyile.spring5recipeapp.domain.Category;
 
 import static org.junit.Assert.*;
 
 public class CategoryCommandToCategoryTest {
 
-    public static final Long ID_VALUE = new Long(1L);
+    public static final String ID_VALUE = "1";
     public static final String DESCRIPTION = "description";
     CategoryCommandToCategory conveter;
 

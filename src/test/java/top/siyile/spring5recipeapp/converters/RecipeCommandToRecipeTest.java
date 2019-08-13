@@ -1,4 +1,4 @@
-package converters;
+package top.siyile.spring5recipeapp.converters;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -6,14 +6,13 @@ import top.siyile.spring5recipeapp.commands.CategoryCommand;
 import top.siyile.spring5recipeapp.commands.IngredientCommand;
 import top.siyile.spring5recipeapp.commands.NotesCommand;
 import top.siyile.spring5recipeapp.commands.RecipeCommand;
-import top.siyile.spring5recipeapp.converters.*;
 import top.siyile.spring5recipeapp.domain.Difficulty;
 import top.siyile.spring5recipeapp.domain.Recipe;
 
 import static org.junit.Assert.*;
 
 public class RecipeCommandToRecipeTest {
-    public static final Long RECIPE_ID = 1L;
+    public static final String RECIPE_ID = "1";
     public static final Integer COOK_TIME = Integer.valueOf("5");
     public static final Integer PREP_TIME = Integer.valueOf("7");
     public static final String DESCRIPTION = "My Recipe";
@@ -22,11 +21,11 @@ public class RecipeCommandToRecipeTest {
     public static final Integer SERVINGS = Integer.valueOf("3");
     public static final String SOURCE = "Source";
     public static final String URL = "Some URL";
-    public static final Long CAT_ID_1 = 1L;
-    public static final Long CAT_ID2 = 2L;
-    public static final Long INGRED_ID_1 = 3L;
-    public static final Long INGRED_ID_2 = 4L;
-    public static final Long NOTES_ID = 9L;
+    public static final String CAT_ID_1 = "1";
+    public static final String CAT_ID2 = "2";
+    public static final String INGRED_ID_1 = "3";
+    public static final String INGRED_ID_2 = "4";
+    public static final String NOTES_ID = "4";
 
     RecipeCommandToRecipe converter;
 

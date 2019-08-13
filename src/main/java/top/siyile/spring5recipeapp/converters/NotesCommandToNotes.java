@@ -7,6 +7,9 @@ import org.springframework.stereotype.Component;
 import top.siyile.spring5recipeapp.commands.NotesCommand;
 import top.siyile.spring5recipeapp.domain.Notes;
 
+/**
+ * Created by jt on 6/21/17.
+ */
 @Component
 public class NotesCommandToNotes implements Converter<NotesCommand, Notes> {
 

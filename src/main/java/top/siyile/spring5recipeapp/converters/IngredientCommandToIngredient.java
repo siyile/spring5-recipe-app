@@ -1,6 +1,5 @@
 package top.siyile.spring5recipeapp.converters;
 
-
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.lang.Nullable;
 import org.springframework.stereotype.Component;
@@ -8,6 +7,9 @@ import top.siyile.spring5recipeapp.commands.IngredientCommand;
 import top.siyile.spring5recipeapp.domain.Ingredient;
 import top.siyile.spring5recipeapp.domain.Recipe;
 
+/**
+ * Created by jt on 6/21/17.
+ */
 @Component
 public class IngredientCommandToIngredient implements Converter<IngredientCommand, Ingredient> {
 

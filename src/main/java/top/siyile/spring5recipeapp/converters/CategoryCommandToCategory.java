@@ -1,6 +1,5 @@
 package top.siyile.spring5recipeapp.converters;
 
-
 import lombok.Synchronized;
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.lang.Nullable;
@@ -8,6 +7,9 @@ import org.springframework.stereotype.Component;
 import top.siyile.spring5recipeapp.commands.CategoryCommand;
 import top.siyile.spring5recipeapp.domain.Category;
 
+/**
+ * Created by jt on 6/21/17.
+ */
 @Component
 public class CategoryCommandToCategory implements Converter<CategoryCommand, Category> {
 

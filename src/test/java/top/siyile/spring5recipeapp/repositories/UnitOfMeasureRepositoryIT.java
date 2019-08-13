@@ -1,6 +1,7 @@
 package top.siyile.spring5recipeapp.repositories;
 
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +13,7 @@ import java.util.Optional;
 
 import static org.junit.Assert.assertEquals;
 
+@Ignore
 @RunWith(SpringRunner.class)
 @DataJpaTest
 public class UnitOfMeasureRepositoryIT {
@@ -24,7 +26,7 @@ public class UnitOfMeasureRepositoryIT {
     }
 
     @Test
-    public void findByDescription() {
+    public void findByDescription() throws Exception {
 
         Optional<UnitOfMeasure> uomOptional = unitOfMeasureRepository.findByDescription("Teaspoon");
 
@@ -32,10 +34,11 @@ public class UnitOfMeasureRepositoryIT {
     }
 
     @Test
-    public void findByDescriptionCup() {
+    public void findByDescriptionCup() throws Exception {
 
         Optional<UnitOfMeasure> uomOptional = unitOfMeasureRepository.findByDescription("Cup");
 
         assertEquals("Cup", uomOptional.get().getDescription());
     }
+
 }

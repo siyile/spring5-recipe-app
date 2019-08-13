@@ -8,9 +8,6 @@ import top.siyile.spring5recipeapp.commands.RecipeCommand;
 import top.siyile.spring5recipeapp.domain.Category;
 import top.siyile.spring5recipeapp.domain.Recipe;
 
-/**
- * Created by jt on 6/21/17.
- */
 @Component
 public class RecipeToRecipeCommand implements Converter<Recipe, RecipeCommand> {
 
