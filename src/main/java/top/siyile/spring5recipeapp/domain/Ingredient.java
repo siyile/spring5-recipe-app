@@ -4,12 +4,13 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.math.BigDecimal;
+import java.util.UUID;
 
 @Getter
 @Setter
 public class Ingredient {
 
-    private String id;
+    private String id = UUID.randomUUID().toString();
     private String description;
     private BigDecimal amount;
 

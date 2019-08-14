@@ -2,12 +2,14 @@ package top.siyile.spring5recipeapp.domain;
 
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.HashSet;
 import java.util.Set;
 
 @Getter
 @Setter
+@Document
 public class Recipe {
 
     private String id;
